@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jim and the Monkey</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <audio id="bg-music" autoplay loop src="./content/background.mp3"></audio>
+    <h1>Jim and the Monkey</h1>
+    <div class="story-container">
+      <div class="video-container">
+        <!-- <img src="./content/curtains.png" /> -->
+        <video
+          autoplay="true"
+          id="video"
+          loop="true"
+          src="./content/videos/scene-01.mp4"
+        ></video>
+      </div>
+      <div class="text-container">
+        <div class="en">Jim <span>lived</span> in a jungle.</div>
+        <div class="tr">Jim ormanda <span>yaşıyordu</span>.</div>
+      </div>
+    </div>
+    <div class="button-container">
+      <div class="navigations">
+        <button id="prev" class="disabled">Previous</button
+        ><button class="playing" id="pause">
+          Mute/Unmute <br />
+          Music</button
+        ><button class="btn-credits">Credits</button
+        ><button id="next">Next</button>
+        <div id="credits">
+          ELT405 Translation Midterm | November, 2022 <br />
+          Burkay Soylu 🙈 Cem Varlık 🙉 Halise Öztürk 🙊 Onur Durmuş
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

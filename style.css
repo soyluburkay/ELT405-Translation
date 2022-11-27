@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(#2b1055, #7597de);
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+font-size: 2.5rem;
+color: wheat;
+margin-bottom: 50px;
+}
+
+.story-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-container {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+}
+
+.text-container {
+  width: 30%;
+  text-align: center;
+}
+
+#video {
+  height: 100%;
+  width: 100%; 
+  border-radius: 3%;
+}
+
+.video-container img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+img#moon {
+  mix-blend-mode: screen;
+}
+
+.text-container div {
+  margin: 30px;
+}
+
+.en {
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: 200ms ease-in-out all;
+  display: inline-block;
+}
+
+.tr {
+  font-weight: 200;
+  font-size: 1.5rem;
+  color: rgb(178, 219, 235);
+  cursor: pointer;
+  transition: 200ms ease-in-out all;
+  display: inline-block;
+}
+
+.en:hover, .tr:hover {
+  transform: translateY(-6px);
+  text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.49);
+}
+
+span {
+  color: #ffc100;
+}
+
+.button-container {
+  margin: 20px;
+}
+
+.navigations {
+  display: flex;
+  justify-content: center;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  background: #ffc100;
+  box-sizing: border-box;
+  box-shadow: none;
+  border: none;
+  border-radius: 5px;
+  margin: 0 10px; 
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 300ms ease-in-out all;
+}
+
+.playing {
+  background-color: rgb(204, 255, 196) !important
+}
+
+.paused {
+  background-color: rgb(255, 196, 196) !important
+}
+
+.btn-credits {
+  background-color: rgb(255, 234, 196) !important
+}
+
+#credits {
+  position:absolute;
+  bottom: 0;
+  opacity: 30%;
+  transform: translateY(100%);
+  text-align: center;
+  line-height: 2rem;
+  color: rgb(249, 238, 218);
+  transition: 300ms ease-in-out all;
+}
+
+.btn-credits:hover ~ #credits {
+  opacity: 100%;
+  transform: translateY(-50%);
+}
+
+.button-container button:hover {
+  opacity: 80%;
+  /* background-color: #f9d467; */
+}
+
+#next:hover {
+ transform: translateX(5px);
+ /* border-radius: 0 100% 100% 0; */
+}
+
+#prev:hover {
+  transform: translateX(-5px);
+  /* border-radius: 100% 0 0 100%; */
+ }
+
+.hidden {
+  opacity: 0;
+  transition: all 3s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+}
+
+.disabled {
+  font-style: italic;
+  background-color: gray !important;
+  opacity: 50%;
+  /* visibility: hidden !important; */
+}
+
+@media only screen and (max-width: 960px) {
+  .story-container {
+    flex-direction: column;
+  }
+
+  .text-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .text-container div {
+    font-size: 1rem;
+  }
+
+  .video-container {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
